@@ -1,0 +1,154 @@
+---
+import Footer from "../components/layout/Footer.astro";
+import Header from "../components/layout/Header.astro";
+import Layout from "../layouts/Layout.astro";
+
+import AboutSection from "./components/AboutSection.astro";
+import PartnerSection from "./components/PartnerSection.astro";
+import ServiceSection from "./components/ServiceSection.astro";
+import TestimonialSection from "./components/TestimonialSection.astro";
+---
+
+<Layout>
+  <Header />
+  <!--Start Page Header-->
+  <section class="page-header">
+    <div class="shape1 rotate-me">
+      <img src="/assets/img/shape/page-header-shape1.png" alt="" />
+    </div>
+    <div class="shape2 float-bob-x">
+      <img src="/assets/img/shape/page-header-shape2.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="page-header__inner">
+        <h2>About us</h2>
+        <ul class="thm-breadcrumb">
+          <li>
+            <a href="index.html"><span class="fa fa-home"></span> Home</a>
+          </li>
+          <li><i class="icon-right-arrow-angle"></i></li>
+          <li class="color-base">About us</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--End Page Header-->
+
+  <AboutSection />
+  <PartnerSection />]
+  <ServiceSection />
+
+  <!--Start Fact Counter One-->
+  <section class="fact-counter-one about">
+    <div class="shape1">
+      <img src="/assets/img/shape/fact-counter-one-about-shape1.png" alt="" />
+    </div>
+    <div class="shape2">
+      <img src="/assets/img/shape/fact-counter-one-about-shape2.png" alt="" />
+    </div>
+    <div class="shape3">
+      <img src="/assets/img/shape/fact-counter-one-about-shape3.png" alt="" />
+    </div>
+    <div class="shape4">
+      <img src="/assets/img/shape/fact-counter-one-about-shape4.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <!--Start Single Fact Counter-->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-fact-counter wow fadeInUp" data-wow-delay=".1s">
+            <div class="single-fact-counter-inner">
+              <div class="single-fact-counter-icon">
+                <span class="icon-completed-projects"
+                  ><span class="path1"></span><span class="path2"></span><span
+                    class="path3"></span></span
+                >
+              </div>
+              <div class="outer-box">
+                <div class="count-outer count-box">
+                  <h2 class="odometer" data-count="484">00</h2>
+                  <i class="icon-plus-symbol-button"></i>
+                </div>
+                <div class="title">
+                  <p>Completed Projects</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Fact Counter-->
+        <!--Start Single Fact Counter-->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-fact-counter wow fadeInUp" data-wow-delay=".2s">
+            <div class="single-fact-counter-inner">
+              <div class="single-fact-counter-icon">
+                <span class="icon-happy-clients"
+                  ><span class="path1"></span><span class="path2"></span><span
+                    class="path3"></span><span class="path4"></span></span
+                >
+              </div>
+              <div class="outer-box">
+                <div class="count-outer count-box">
+                  <h2 class="odometer" data-count="209">00</h2>
+                  <i class="icon-plus-symbol-button"></i>
+                </div>
+                <div class="title">
+                  <p>Happy Clients</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Fact Counter-->
+        <!--Start Single Fact Counter-->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-fact-counter wow fadeInUp" data-wow-delay=".3s">
+            <div class="single-fact-counter-inner">
+              <div class="single-fact-counter-icon">
+                <span class="icon-winning-award"></span>
+              </div>
+              <div class="outer-box">
+                <div class="count-outer count-box">
+                  <h2 class="odometer" data-count="123">00</h2>
+                  <i class="icon-plus-symbol-button"></i>
+                </div>
+                <div class="title">
+                  <p>Winning Award</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Fact Counter-->
+        <!--Start Single Fact Counter-->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-fact-counter wow fadeInUp" data-wow-delay=".4s">
+            <div class="single-fact-counter-inner">
+              <div class="single-fact-counter-icon">
+                <span class="icon-cup-teas"
+                  ><span class="path1"></span><span class="path2"></span><span
+                    class="path3"></span><span class="path4"></span></span
+                >
+              </div>
+              <div class="outer-box">
+                <div class="count-outer count-box">
+                  <h2 class="odometer" data-count="245">00</h2>
+                  <i class="icon-plus-symbol-button"></i>
+                </div>
+                <div class="title">
+                  <p>Cup of Teas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End Single Fact Counter-->
+      </div>
+    </div>
+  </section>
+  <!--End Fact Counter One-->
+
+  <TestimonialSection />
+</Layout>
+
+<Footer />
