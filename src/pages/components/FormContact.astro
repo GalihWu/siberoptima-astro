@@ -2,7 +2,7 @@
   <div class="container">
     <div class="contact-page__bottom-form-inner">
       <div class="title-box">
-        <h2>Let’s Get in Touch</h2>
+        <h2>Let's Get in Touch</h2>
         <p>
           Your email address will not be published. Required fields are marked *
         </p>
@@ -52,6 +52,7 @@
               </div>
               <div class="contact-page__btn">
                 <button
+                  id="submitBtn"
                   class="thm-btn"
                   type="submit"
                   data-loading-text="Please wait..."
@@ -62,7 +63,58 @@
             </div>
           </div>
         </form>
+
+        <!-- Status message -->
+        <div id="formStatus" style="display:none; margin-top: 16px; font-weight: 500;"></div>
       </div>
     </div>
   </div>
 </div>
+
+<script is:inline>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzvzB73oceCkb81N0MMuZRlYCROPql_xWKXl4TsTnH6Do4RDo7Dg5BqwNka8DBbGS442A/exec";
+
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const btn = document.getElementById("submitBtn");
+    const status = document.getElementById("formStatus");
+    const form = e.target;
+
+    const payload = {
+      name: form.name.value.trim(),
+      phone: form.phone.value.trim(),
+      company: form.company.value.trim(),
+      income: form.income.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    // Loading state
+    btn.disabled = true;
+    btn.querySelector(".txt").textContent = "Mengirim...";
+    status.style.display = "none";
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      status.style.display = "block";
+      status.style.color = "#28a745";
+      status.textContent = "Pesan berhasil dikirim! Kami akan segera menghubungi Anda.";
+      form.reset();
+
+    } catch (err) {
+      status.style.display = "block";
+      status.style.color = "#dc3545";
+      status.textContent = "Gagal mengirim pesan. Silakan coba lagi.";
+
+    } finally {
+      btn.disabled = false;
+      btn.querySelector(".txt").textContent = "Kirim Pesan";
+    }
+  });
+</script>
