@@ -1,3 +1,7 @@
+---
+const { isHome } = Astro.props || false;
+---
+
 <!--Start Main Header One -->
 <header class="main-header main-header-three">
   <div class="main-header-three__bottom">
@@ -21,11 +25,28 @@
                 <nav class="menu-nav">
                   <div class="navbar-wrap main-menu">
                     <ul class="navigation">
-                      <li><a href="/about/">About</a></li>
-                      <li><a href="#services">Services</a></li>
-                      <li><a href="#projects">Projects</a></li>
+                      <li>
+                        <a href="/about/" class={isHome ? "" : "text-white"}
+                          >About</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#services" class={isHome ? "" : "text-white"}
+                          >Services</a
+                        >
+                      </li>
+                      <li>
+                        <a href="#projects" class={isHome ? "" : "text-white"}
+                          >Projects</a
+                        >
+                      </li>
+                      <li>
+                        <a href="/contact/" class={isHome ? "" : "text-white"}
+                          >Contact</a
+                        >
+                      </li>
                       <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
+                        <a href="#" class={isHome ? "" : "text-white"}>Pages</a>
                         <ul class="sub-menu">
                           <li>
                             <a href="#testimonials">Testimonials</a>
@@ -120,7 +141,7 @@
       },
       {
         root: null,
-        rootMargin: "-30% 0px -60% 0px", // biar lebih terasa aktif di tengah layar
+        rootMargin: "-30% 0px -60% 0px",
         threshold: 0,
       },
     );
