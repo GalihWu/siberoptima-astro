@@ -1,5 +1,5 @@
 <!--Start Footer Three-->
-<footer class="footer-three">
+<div class="footer-three">
   <div class="footer-main footer-main__three">
     <div class="footer-three__shape1">
       <img src="/assets/img/shape/footer-three__shape1.png" alt="shapes" />
@@ -12,7 +12,52 @@
       <div
         class="footer-main__inner footer-main-two__inner footer-main-three__inner"
       >
-        <div class="row">
+        <div class="row gap-5">
+          <!-- Services -->
+          <div
+            class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
+            data-wow-delay=".3s"
+          >
+            <div class="single-footer-widget single-footer-widget-style2">
+              <div class="title">
+                <h3>Our Services</h3>
+              </div>
+
+              <div
+                class="single-footer-widget-box single-footer-widget__links single-footer-widget__links-style2"
+              >
+                <ul class="clearfix">
+                  <li>
+                    <p><a href="#">Ads Performance Scale Up</a></p>
+                  </li>
+                  <li>
+                    <p><a href="#">Content Creative & Social Media</a></p>
+                  </li>
+                  <li>
+                    <p><a href="#">Website Development</a></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--Start sosmed-->
+            <div class="footer-three mt-3">
+              <ul class="social-icons">
+                <li>
+                  <a href="https://www.instagram.com/siberoptimacom/"
+                    ><i class="fab fa-instagram"></i></a
+                  >
+                </li>
+                <!-- <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li> -->
+              </ul>
+            </div>
+            <!-- end sosmed -->
+          </div>
+          <!-- end services -->
+
+          <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"></div>
           <!-- Company Info -->
           <div
             class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"
@@ -20,7 +65,11 @@
           >
             <div class="single-footer-widget single-footer-widget-style2">
               <div class="title">
-                <h3>Siberoptima</h3>
+                <div class="footer-three__logo-box">
+                  <a href="index.html">
+                    <img src="assets/img/logo/footer-three-1.png" alt="logo" />
+                  </a>
+                </div>
               </div>
               <div
                 class="single-footer-widget-box single-footer-widget__about single-footer-widget__about--2"
@@ -61,89 +110,54 @@
             </div>
           </div>
 
-          <!-- Navigation -->
-          <div
-            class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-            data-wow-delay=".2s"
-          >
-            <div class="single-footer-widget single-footer-widget-style2">
-              <div class="title">
-                <h3>Navigation</h3>
-              </div>
-
-              <div
-                class="single-footer-widget-box single-footer-widget__links single-footer-widget__links-style2"
-              >
-                <ul class="clearfix">
-                  <li>
-                    <p><a href="index.html">Home</a></p>
-                  </li>
-                  <li>
-                    <p><a href="about.html">About Us</a></p>
-                  </li>
-                  <li>
-                    <p><a href="services.html">Services</a></p>
-                  </li>
-                  <li>
-                    <p><a href="portfolio.html">Portfolio</a></p>
-                  </li>
-                  <li>
-                    <p><a href="contact.html">Contact</a></p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Services -->
-          <div
-            class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp"
-            data-wow-delay=".3s"
-          >
-            <div class="single-footer-widget single-footer-widget-style2">
-              <div class="title">
-                <h3>Our Services</h3>
-              </div>
-
-              <div
-                class="single-footer-widget-box single-footer-widget__links single-footer-widget__links-style2"
-              >
-                <ul class="clearfix">
-                  <li>
-                    <p><a href="#">Digital Marketing</a></p>
-                  </li>
-                  <li>
-                    <p><a href="#">Ads Management</a></p>
-                  </li>
-                  <li>
-                    <p><a href="#">Content Planner</a></p>
-                  </li>
-                  <li>
-                    <p><a href="#">Landing Page</a></p>
-                  </li>
-                  <li>
-                    <p><a href="#">Website Development</a></p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="footer-bottom footer-bottom-two footer-bottom-three">
-      <div class="container">
-        <div
-          class="footer-bottom__inner footer-bottom__two-inner footer-bottom__three-inner"
-        >
-          <div class="copyright-text text-center">
-            <p>© 2026 Siberoptima Digital Agency. All rights reserved.</p>
-          </div>
+          <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp"></div>
         </div>
       </div>
     </div>
   </div>
-</footer>
-<!--End Footer Three-->
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom footer-bottom-two footer-bottom-three">
+    <div class="container">
+      <div
+        class="footer-bottom__inner footer-bottom__two-inner footer-bottom__three-inner"
+      >
+        <div class="copyright-text text-center">
+          <p>© 2026 Siberoptima Digital Agency. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--End Footer Three-->
+
+  <style>
+    .social-icons {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-icons li a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px; /* ukuran lingkaran */
+      height: 40px;
+      border-radius: 50%;
+      text-decoration: none;
+      background-color: #000;
+      color: #fff;
+      font-size: 20px; /* ukuran icon */
+      transition: all 0.3s ease;
+      border: 2px solid #000; /* border hitam */
+    }
+
+    /* Hover effect */
+    .social-icons li a:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</div>

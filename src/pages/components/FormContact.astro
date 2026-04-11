@@ -1,11 +1,9 @@
-<div class="contact-page__bottom-form">
+<div class="contact-page__bottom-form" id="formSection">
   <div class="container">
     <div class="contact-page__bottom-form-inner">
       <div class="title-box">
-        <h2>Let's Get in Touch</h2>
-        <p>
-          Your email address will not be published. Required fields are marked *
-        </p>
+        <img src="" alt="" />
+        <h3>Tingkatkan Bisnis Anda Sekarang bersama Kami Siberoptima</h3>
       </div>
       <div class="contact-page__bottom-form-inner-box">
         <form
@@ -58,9 +56,18 @@
                   data-loading-text="Please wait..."
                 >
                   <span class="txt">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.486a.5.5 0 0 0 .614.614l5.657-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.366l-.36-.214-3.733.968.992-3.635-.235-.374A9.818 9.818 0 1 1 12 21.818z"/>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      style="width:18px;height:18px;vertical-align:middle;margin-right:6px;"
+                    >
+                      <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                      ></path>
+                      <path
+                        d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.486a.5.5 0 0 0 .614.614l5.657-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.366l-.36-.214-3.733.968.992-3.635-.235-.374A9.818 9.818 0 1 1 12 21.818z"
+                      ></path>
                     </svg>
                     Konsultasi Sekarang!
                   </span>
@@ -71,19 +78,30 @@
         </form>
 
         <!-- Status message -->
-        <div id="formStatus" style="display:none; margin-top: 16px; font-weight: 500;"></div>
+        <div
+          id="formStatus"
+          style="display:none; margin-top: 16px; font-weight: 500;"
+        >
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <script is:inline>
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxIRKe8sjtMJd27T3rZEEt5UHzwYyZsnVCOqm_vJO5CgDWlOxqxrQi8e6KtEO-UHbyKkA/exec";
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbxIRKe8sjtMJd27T3rZEEt5UHzwYyZsnVCOqm_vJO5CgDWlOxqxrQi8e6KtEO-UHbyKkA/exec";
   const WA_NUMBER = "6285831242497";
 
   function getUTMParams() {
     const params = new URLSearchParams(window.location.search);
-    const utmKeys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+    const utmKeys = [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_content",
+      "utm_term",
+    ];
 
     utmKeys.forEach((key) => {
       if (params.get(key)) {
@@ -100,40 +118,47 @@
     };
   }
 
-  document.getElementById("contactForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    const btn = document.getElementById("submitBtn");
-    const status = document.getElementById("formStatus");
-    const form = e.target;
-    const utm = getUTMParams();
+      const btn = document.getElementById("submitBtn");
+      const status = document.getElementById("formStatus");
+      const form = e.target;
+      const utm = getUTMParams();
 
-    const name = form.name.value.trim();
-    const phone = form.phone.value.trim();
-    const company = form.company.value.trim();
-    const income = form.income.value.trim();
-    const message = form.message.value.trim();
+      const name = form.name.value.trim();
+      const phone = form.phone.value.trim();
+      const company = form.company.value.trim();
+      const income = form.income.value.trim();
+      const message = form.message.value.trim();
 
-    const payload = {
-      name, phone, company, income, message, ...utm,
-    };
+      const payload = {
+        name,
+        phone,
+        company,
+        income,
+        message,
+        ...utm,
+      };
 
-    // Loading state
-    btn.disabled = true;
-    btn.querySelector(".txt").innerHTML = "Mengirim...";
-    status.style.display = "none";
+      // Loading state
+      btn.disabled = true;
+      btn.querySelector(".txt").innerHTML = "Mengirim...";
+      status.style.display = "none";
 
-    try {
-      // Kirim ke Google Sheets (fire and forget)
-      fetch(SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      try {
+        // Kirim ke Google Sheets (fire and forget)
+        fetch(SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
 
-      // Susun pesan WA
-      const waMessage = `Halo Siberoptima! Saya ingin konsultasi.
+        // Susun pesan WA
+        const waMessage = `Halo Siberoptima! Saya ingin konsultasi.
 
 Nama: ${name}
 No. WhatsApp: ${phone}
@@ -141,20 +166,19 @@ Company/Brand: ${company}
 Omzet per Bulan: ${income}
 Pesan: ${message}`;
 
-      // Redirect ke WhatsApp
-      const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage)}`;
-      window.open(waURL, "_blank");
+        // Redirect ke WhatsApp
+        const waURL = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage)}`;
+        window.open(waURL, "_blank");
 
-      form.reset();
-
-    } catch (err) {
-      status.style.display = "block";
-      status.style.color = "#dc3545";
-      status.textContent = "Gagal mengirim. Silakan coba lagi.";
-
-    } finally {
-      btn.disabled = false;
-      btn.querySelector(".txt").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.486a.5.5 0 0 0 .614.614l5.657-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.366l-.36-.214-3.733.968.992-3.635-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg> Konsultasi Sekarang!`;
-    }
-  });
+        form.reset();
+      } catch (err) {
+        status.style.display = "block";
+        status.style.color = "#dc3545";
+        status.textContent = "Gagal mengirim. Silakan coba lagi.";
+      } finally {
+        btn.disabled = false;
+        btn.querySelector(".txt").innerHTML =
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.103 1.523 5.824L.057 23.486a.5.5 0 0 0 .614.614l5.657-1.466A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.366l-.36-.214-3.733.968.992-3.635-.235-.374A9.818 9.818 0 1 1 12 21.818z"/></svg> Konsultasi Sekarang!`;
+      }
+    });
 </script>
