@@ -3749,3 +3749,112 @@ Cta Two Testmonials Css
 }
 
 /*========================== Tambahan ==========================*/
+
+/* strart portofolio */
+
+.portfolio-three {
+  padding: 100px 0;
+}
+
+.portfolio-three__single {
+  margin-bottom: 40px;
+}
+
+.portfolio-three__img img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-three__img:hover img {
+  transform: translateY(-5px);
+}
+
+.portfolio-three__content {
+  margin-top: 20px;
+}
+
+.portfolio-three__content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.portfolio-three__content p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* end portofolio */
+
+/* start clients */
+
+.category-slide {
+  padding: 10px 0;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.client-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 140px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.client-card img {
+  max-height: 45px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.client-card:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+h5 {
+  font-weight: 600;
+}
+/* end clients */
