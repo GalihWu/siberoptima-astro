@@ -1,4 +1,33 @@
-<!--Start Service Three-->
+---
+const services = [
+  {
+    title: "Performance Digital Marketing Ads and Consultant",
+    desc: "Scale up bisnis dengan strategi iklan yang terukur dengan data-driven approaches",
+    href: "web-development.html",
+    icon: "icon-design-strategy1",
+    delay: "0ms",
+    animation: "fadeInLeft",
+  },
+
+  {
+    title: "Content Creative and Social Media Management",
+    desc: "Optimalkan kualitas konten iklan dan social media dengan goal yang clear dan terukur",
+    href: "web-development.html",
+    icon: "icon-digital-marketing",
+    delay: "200ms",
+    animation: "fadeInLeft",
+  },
+    {
+    title: "Website Development",
+    desc: "Tampil Lebih Profesional dengan Website yang dibuat sesuai kebutuhan brand",
+    href: "web-development.html",
+    icon: "icon-web-development2",
+    delay: "100ms",
+    animation: "fadeInRight",
+  },
+];
+---
+
 <section class="service-three" id="services">
   <div class="service-three__shape1 float-bob-x">
     <img src="/assets/img/shape/service-three__shape1.png" alt="shapes" />
@@ -9,6 +38,7 @@
   <div class="service-three__shape3 float-bob-y">
     <img src="/assets/img/shape/service-three__shape3.png" alt="shapes" />
   </div>
+
   <div class="container">
     <div class="sec-title-three text-center">
       <div class="sub-title">
@@ -16,46 +46,16 @@
       </div>
       <h2>What We Offer For You</h2>
     </div>
-    <div class="row justify-content-md-center">
-      <!--Start Single Service Three-->
-      <div
-        class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft"
-        data-wow-delay="0ms"
-        data-wow-duration="1500ms"
-      >
-        <div class="service-three__single">
-          <div class="service-three__single-icon">
-            <span class="icon-design-strategy1">
-              <span class="path1"></span><span class="path2"></span>
-            </span>
-          </div>
-          <div class="service-three__single-content">
-            <div class="title">
-              <h3>
-                <a href="web-development.html"
-                  >Performance Digital Marketing Ads and Consultant
-                </a>
-              </h3>
-            </div>
-            <div class="text">
-              <p>
-                Scale up bisnis dengan strategi iklan yang terukur dengan
-                data-driven approaches
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End Single Service Three-->
 
-      <!--Start Single Service Three-->
-      <div
-        class="col-xl-4 col-lg-6 col-md-6 wow fadeInRight"
-        data-wow-delay="100ms"
-        data-wow-duration="1500ms"
-      >
-        <div class="service-three__single">
-          <div class="service-three__single-icon">
+    <div class="row justify-content-md-center">
+      {services.map((service) => (
+        <div
+          class={`col-xl-4 col-lg-6 col-md-6 wow ${service.animation}`}
+          data-wow-delay={service.delay}
+          data-wow-duration="1500ms"
+        >
+          <div class="service-three__single">
+             <div class="service-three__single-icon">
             <span class="icon-web-development2"
               ><span class="path1"></span><span class="path2"></span><span
                 class="path3"></span><span class="path4"></span><span
@@ -63,55 +63,32 @@
                 class="path7"></span>
             </span>
           </div>
-          <div class="service-three__single-content">
-            <div class="title">
-              <h3>
-                <a href="web-development.html">Website Development</a>
-              </h3>
-            </div>
-            <div class="text">
-              <p>
-                Tampil Lebih Profesional dengan Website yang dibuat sesuai
-                kebutuhan brand
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End Single Service Three-->
 
-      <!--Start Single Service Three-->
-      <div
-        class="col-xl-4 col-lg-6 col-md-6 wow fadeInLeft"
-        data-wow-delay="200ms"
-        data-wow-duration="1500ms"
-      >
-        <div class="service-three__single">
-          <div class="service-three__single-icon">
-            <span class="icon-digital-marketing"
-              ><span class="path1"></span><span class="path2"></span><span
-                class="path3"></span>
-            </span>
-          </div>
-          <div class="service-three__single-content">
-            <div class="title">
-              <h3>
-                <a href="web-development.html"
-                  >Content Creative and Social Media Management</a
-                >
-              </h3>
-            </div>
-            <div class="text">
-              <p>
-                Optimalkan kualitas konten iklan dan social media dengan goal
-                yang clear dan terukur
-              </p>
+            <div class="service-three__single-content">
+              <div class="title">
+                <h3>
+                  <a href={service.href}>{service.title}</a>
+                </h3>
+              </div>
+
+              <div class="text">
+                <p>{service.desc}</p>
+              </div>
+
+              <!-- 🔥 Button Baru -->
+              <div class="service-three__btn mt-3">
+                 <a class="thm-btn border" href={service.href}>
+                <span class="txt" style="font-size: 16px; ">
+                  Pelajari Selanjutnya
+                  <i class="icon-next"></i>
+                </span>
+              </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <!--End Single Service Three-->
+      ))}
     </div>
   </div>
 </section>
-<!--End Service Three-->
+

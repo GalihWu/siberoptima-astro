@@ -1,0 +1,109 @@
+---
+const portfolios = [
+  {
+    title: "Aksiberbagi.com",
+    category: "Donasi Online",
+    image: "/assets/img/porto/1.png",
+    link: "https://aksiberbagi.com/",
+  },
+  {
+    title: "Beramalbersama.com",
+    category: "Donasi Online",
+    image: "/assets/img/porto/2.png",
+    link: "https://beramalbersama.com/",
+  },
+  
+];
+---
+
+<section class="portfolio-three">
+  <div class="container">
+    <div class="sec-title-four text-center">
+      <div class="sub-title">
+        <h4>Our Portfolio</h4>
+      </div>
+      <h2>Our Recent Works</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      {portfolios.map((item) => (
+        <div class="col-xl-4 col-lg-6 col-md-6">
+          <div class="portfolio-three__single text-center">
+            
+            <!-- Image -->
+            <div class="portfolio-three__img">
+              <img src={item.image} alt={item.title} />
+            </div>
+
+            <!-- Content -->
+            <div class="portfolio-three__content">
+              <h3>{item.title}</h3>
+              <p>{item.category}</p>
+
+              <a href={item.link} target="_blank" class="portfolio-btn">
+                Visit Website
+                  <i class="icon-next"></i>
+
+              </a>
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>.portfolio-three {
+  padding: 100px 0;
+}
+
+.portfolio-three__single {
+  margin-bottom: 40px;
+}
+
+.portfolio-three__img img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-three__img:hover img {
+  transform: translateY(-5px);
+}
+
+.portfolio-three__content {
+  margin-top: 20px;
+}
+
+.portfolio-three__content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.portfolio-three__content p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
+  background: #000;
+  color: #fff;
+}</style>

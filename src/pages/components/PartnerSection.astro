@@ -1,94 +1,140 @@
-<section class="partner-style3">
-  <div class="container">
-    <div class="sec-title-three text-center">
-      <div class="title">
-        <h4>Our Clients</h4>
-      </div>
-    </div>
-    <ul class="row clearfix list-one">
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-1.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-9.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-2.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-10.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-3.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-11.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-4.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-12.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-    </ul>
+---
+const clientCategories = [
+  {
+    name: "Website",
+    clients: [
+      "/assets/img/brand/brand-v3-1.png",
+      "/assets/img/brand/brand-v3-2.png",
+      "/assets/img/brand/brand-v3-3.png",
+      "/assets/img/brand/brand-v3-4.png",
+      "/assets/img/brand/brand-v3-5.png",
+      "/assets/img/brand/brand-v3-6.png",
+    ],
+  },
+  {
+    name: "Ads",
+    clients: [
+      "/assets/img/brand/brand-v3-7.png",
+      "/assets/img/brand/brand-v3-8.png",
+      "/assets/img/brand/brand-v3-9.png",
+      "/assets/img/brand/brand-v3-10.png",
+    ],
+  },
+  {
+    name: "Social Media",
+    clients: [
+      "/assets/img/brand/brand-v3-11.png",
+      "/assets/img/brand/brand-v3-12.png",
+      "/assets/img/brand/brand-v3-13.png",
+      "/assets/img/brand/brand-v3-14.png",
+    ],
+  },
+];
+---
 
-    <ul class="row">
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-5.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-13.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-6.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-14.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-7.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-15.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-      <!--Start Single Partner Logo Box-->
-      <li class="col-xl-3 col-lg-3">
-        <div class="single-partner-style3-logo-box">
-          <a href="#">
-            <img src="/assets/img/brand/brand-v3-8.png" alt="#" />
-            <img class="" src="/assets/img/brand/brand-v3-16.png" alt="#" />
-          </a>
-        </div>
-      </li>
-      <!--End Single Partner Logo Box-->
-    </ul>
+<section class="about-three">
+  <div class="container">
+    <div class="sec-title-three text-center mb-4">
+      <h4>Our Clients</h4>
+    </div>
+
+    <!-- MAIN SWIPER -->
+    <div class="swiper client-category-slider">
+      <div class="swiper-wrapper">
+
+        {clientCategories.map((category) => (
+          <div class="swiper-slide">
+            <div class="category-slide">
+
+
+              <!-- GRID CLIENT -->
+              <div class="client-grid">
+                {category.clients.map((logo) => (
+                  <div class="client-card">
+                    <img src={logo} alt="client logo" />
+                  </div>
+                ))}
+              </div>
+              <p class="text-center mt-4">{category.name}</p>
+
+            </div>
+          </div>
+        ))}
+
+      </div>
+
+      <!-- navigation -->
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
   </div>
 </section>
+
+<script>
+import Swiper from "swiper";
+  new Swiper(".client-category-slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoHeight: true,
+
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+</script>
+
+<style>
+  .category-slide {
+    padding: 10px 0;
+  }
+
+  .client-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .client-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 140px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  }
+
+  .client-card img {
+    max-height: 45px;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+
+  .client-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .client-card:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  h5 {
+    font-weight: 600;
+  }
+</style>
